@@ -2,7 +2,7 @@ import React from "react";
 
 const PatientList = ({ patients }) => {
 
-  function handleButtonClick(patient) {
+  const handleButtonClick = (patient) => {
     // <Patient />
     console.log(patient)
   }
