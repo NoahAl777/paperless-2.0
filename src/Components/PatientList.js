@@ -4,6 +4,7 @@ import Filter from "./Filter";
 
 const PatientList = ({ patients }) => {
   const [selectedPatient, setSelectedPatient] = useState(patients[1])
+  const [patientButtons, setPatientButtons] = useState([])
 
   const handleButtonClick = (patient) => {
     setSelectedPatient(patient)
