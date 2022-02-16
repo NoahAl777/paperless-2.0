@@ -1,9 +1,13 @@
 import React from "react";
 
 const PatientList = ({ patients }) => {
-  // const listOfPatients = [...patients].map((patient) => console.log(patient))
+
+  const listOfPatients = [...patients].map((patient, index) => <h3 key={index}>{`${patient.firstName} ${patient.lastName}`}</h3>)
+
   return (
-    <h1>Patient Component</h1>
+    <div className="PatientList">
+      {listOfPatients}
+    </div>
   );
 };
 
