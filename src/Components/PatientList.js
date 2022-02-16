@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PatientInfo from "./PatientInfo";
+import Filter from "./Filter";
 
 const PatientList = ({ patients }) => {
   const [selectedPatient, setSelectedPatient] = useState(patients[1])
@@ -23,6 +24,7 @@ const PatientList = ({ patients }) => {
 
   return (
     <div>
+      <Filter />
       <div className="PatientList">
         {listOfPatients}
       </div>
