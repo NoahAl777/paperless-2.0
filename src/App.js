@@ -6,6 +6,13 @@ import PatientList from './Components/PatientList';
 
 function App() {
   const [patients, setPatients] = []
+  const patientsUrl = "http://localhost:3000/patients"
+
+  useEffect(() => {
+    fetch(patientsUrl)
+      .then((r) => r.json())
+      .then((data) => console.log(data))
+  })
 
   return (
     <div className="App">
