@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import PatientInfo from "./PatientInfo";
 
 const PatientList = ({ patients }) => {
+  const [selectedPatient, setSelectedPatient] = useState(patients[1])
 
   const handleButtonClick = (patient) => {
-    // <Patient />
     console.log(patient)
   }
 
@@ -21,8 +22,13 @@ const PatientList = ({ patients }) => {
 
 
   return (
-    <div className="PatientList">
-      {listOfPatients}
+    <div>
+      <div className="PatientList">
+        {listOfPatients}
+      </div>
+      <div className="PatientInfo">
+        <PatientInfo />
+      </div>
     </div>
   );
 };
