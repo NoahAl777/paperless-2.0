@@ -5,7 +5,7 @@ const PatientList = ({ patients }) => {
   const [selectedPatient, setSelectedPatient] = useState(patients[1])
 
   const handleButtonClick = (patient) => {
-    console.log(patient)
+    setSelectedPatient(patient)
   }
 
   const listOfPatients = [...patients].map((patient, index) => {
