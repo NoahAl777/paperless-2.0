@@ -8,7 +8,6 @@ function App() {
   const [patients, setPatients] = useState([])
   const patientsUrl = "http://localhost:3000/patients"
 
-  console.log(patients)
   useEffect(() => {
     fetch(patientsUrl)
       .then((r) => r.json())
@@ -18,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <PatientList />
+      <PatientList patients={patients} />
     </div>
   );
 }
