@@ -5,14 +5,15 @@ import NavBar from "./Components/NavBar"
 import PatientList from './Components/PatientList';
 
 function App() {
-  const [patients, setPatients] = []
+  const [patients, setPatients] = useState([])
   const patientsUrl = "http://localhost:3000/patients"
 
+  console.log(patients)
   useEffect(() => {
     fetch(patientsUrl)
       .then((r) => r.json())
-      .then((data) => console.log(data))
-  })
+      .then((data) => setPatients(data))
+  }, [])
 
   return (
     <div className="App">
