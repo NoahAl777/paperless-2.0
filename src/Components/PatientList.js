@@ -27,7 +27,7 @@ const PatientList = ({ patients }) => {
         {listOfPatients}
       </div>
       <div className="PatientInfo">
-        <PatientInfo />
+        <PatientInfo selectedPatient={selectedPatient} />
       </div>
     </div>
   );
