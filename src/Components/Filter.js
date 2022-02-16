@@ -1,9 +1,15 @@
 import React from "react";
 
 const Filter = () => {
+
+  const handleChange = (event) => {
+    console.log(event.target.value)
+  }
+
   return (
     <div className="Filter">
-      <h2>Filter component</h2>
+      <label>Search by name:</label>
+      <input type="text" onChange={handleChange}></input>
     </div>
   );
 };
