@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PatientInfo from "./PatientInfo";
 import Filter from "./Filter";
 
 const PatientList = ({ patients, selectedPatient, setSelectedPatient }) => {
-  const [filterCriteria, setFilterCriteria] = useState("N");
+  const [filterCriteria, setFilterCriteria] = useState("");
   const [patientsToDisplay, setPatientsToDisplay] = useState([]);
+  // debugger
+  useEffect(() => {
+    setPatientsToDisplay(patients)
+  }, [patients])
 
+  // console.log("display", patientsToDisplay)
   const handleButtonClick = (patient) => {
     setSelectedPatient(patient)
   };
+
   // debugger
-  const listOfPatients = patients.map((patient, index) => {
+  const listOfPatients = patientsToDisplay.map((patient, index) => {
     return (
       <button
         key={index}
