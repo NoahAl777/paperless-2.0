@@ -8,9 +8,12 @@ const PatientList = ({ patients, selectedPatient, setSelectedPatient }) => {
   // debugger
   useEffect(() => {
     setPatientsToDisplay(patients)
-  }, [patients])
+  }, [patients]);
 
-  // console.log("display", patientsToDisplay)
+  useEffect(() => {
+    setPatientsToDisplay(patients.filter((patient) => patient.firstName.startsWith(filterCriteria)))
+  }, [filterCriteria]);
+
   const handleButtonClick = (patient) => {
     setSelectedPatient(patient)
   };
