@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <NavBar />
       <PatientList patients={patients} selectedPatient={selectedPatient} setSelectedPatient={setSelectedPatient} />
-      <PatientForm />
+      <PatientForm patientsUrl={patientsUrl} />
     </div>
   );
 }

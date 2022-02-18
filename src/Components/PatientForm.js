@@ -1,6 +1,6 @@
 import React from "react";
 
-const PatientForm = () => {
+const PatientForm = ({ patientsUrl }) => {
   return (
     <div className="PatientForm">
       <h3>PatientForm Component</h3>
