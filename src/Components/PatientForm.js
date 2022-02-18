@@ -5,6 +5,12 @@ const PatientForm = ({ patientsUrl }) => {
   const handleSubmit = (event) => {
     console.log(event)
     event.preventDefault()
+    const newPatientFormData = {
+      firstName: event.target[0].value,
+      lastName: event.target[1].value
+    }
+
+    console.log(newPatientFormData)
   }
 
   return (
