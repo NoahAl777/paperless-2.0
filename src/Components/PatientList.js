@@ -9,6 +9,8 @@ const PatientList = ({ patients, selectedPatient, setSelectedPatient }) => {
     setSelectedPatient(patient)
   };
 
+  const patientsToDisplay = patients.filter((patient) => patient.firstName.includes(filterCriteria))
+
   const listOfPatients = patients.map((patient, index) => {
     return (
       <button
