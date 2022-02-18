@@ -3,10 +3,11 @@ import PatientInfo from "./PatientInfo";
 import Filter from "./Filter";
 
 const PatientList = ({ patients, selectedPatient, setSelectedPatient }) => {
+  const [filterCriteria, setFilterCriteria] = useState(true);
 
   const handleButtonClick = (patient) => {
     setSelectedPatient(patient)
-  }
+  };
 
   const listOfPatients = patients.map((patient, index) => {
     return (
