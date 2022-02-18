@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import PatientInfo from "./PatientInfo";
 import Filter from "./Filter";
 
-const PatientList = ({ patients }) => {
-  const [selectedPatient, setSelectedPatient] = useState(patients[1])
-  const [patientButtons, setPatientButtons] = useState([])
+const PatientList = ({ patients, selectedPatient, setSelectedPatient }) => {
 
   const handleButtonClick = (patient) => {
     setSelectedPatient(patient)
   }
 
-  const listOfPatients = [...patients].map((patient, index) => {
+  const listOfPatients = patients.map((patient, index) => {
     return (
       <button
         key={index}
@@ -21,7 +19,6 @@ const PatientList = ({ patients }) => {
     );
   }
   );
-
 
   return (
     <div>
