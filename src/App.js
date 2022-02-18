@@ -6,18 +6,24 @@ import PatientList from './Components/PatientList';
 
 function App() {
   const [patients, setPatients] = useState([])
+  const [selectedPatient, setSelectedPatient] = useState({})
   const patientsUrl = "http://localhost:3000/patients"
 
   useEffect(() => {
     fetch(patientsUrl)
       .then((r) => r.json())
-      .then((data) => setPatients(data))
+      .then((data) => {
+        setPatients(data)
+        setSelectedPatient(data[0])
+      })
+
+
   }, [])
 
   return (
     <div className="App">
       <NavBar />
-      <PatientList patients={patients} />
+      <PatientList patients={patients} selectedPatient={selectedPatient} setSelectedPatient={setSelectedPatient} />
     </div>
   );
 }
