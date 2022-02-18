@@ -3,7 +3,7 @@ import React from "react";
 const Filter = ({ setFilterCriteria }) => {
 
   const handleChange = (event) => {
-    console.log(event.target.value)
+    setFilterCriteria(event.target.value)
   }
 
   return (
