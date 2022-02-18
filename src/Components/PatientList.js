@@ -30,7 +30,7 @@ const PatientList = ({ patients, selectedPatient, setSelectedPatient }) => {
 
   return (
     <div>
-      <Filter />
+      <Filter setFilterCriteria={setFilterCriteria} />
       <div className="PatientList">
         {listOfPatients}
       </div>
