@@ -16,8 +16,6 @@ function App() {
         setPatients(data)
         setSelectedPatient(data[0])
       })
-
-
   }, [])
 
   return (
