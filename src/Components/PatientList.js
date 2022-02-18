@@ -3,14 +3,13 @@ import PatientInfo from "./PatientInfo";
 import Filter from "./Filter";
 
 const PatientList = ({ patients, selectedPatient, setSelectedPatient }) => {
-  const [filterCriteria, setFilterCriteria] = useState(true);
+  const [filterCriteria, setFilterCriteria] = useState("N");
+  const [patientsToDisplay, setPatientsToDisplay] = useState([]);
 
   const handleButtonClick = (patient) => {
     setSelectedPatient(patient)
   };
-
-  const patientsToDisplay = patients.filter((patient) => patient.firstName.includes(filterCriteria))
-
+  // debugger
   const listOfPatients = patients.map((patient, index) => {
     return (
       <button
