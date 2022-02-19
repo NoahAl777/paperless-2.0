@@ -1,6 +1,6 @@
 import React from "react";
 
-const PatientForm = ({ patientsUrl }) => {
+const PatientForm = ({ patientsUrl, patients, setPatients }) => {
 
   const handleSubmit = (event) => {
     console.log(event.target)
