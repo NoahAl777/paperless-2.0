@@ -18,7 +18,7 @@ const PatientForm = ({ patientsUrl, patients, setPatients }) => {
       body: JSON.stringify(newPatientFormData)
     })
       .then(r => r.json())
-      .then((data) => console.log(data))
+      .then(newPatient => setPatients([...patients, newPatient]))
   }
 
   return (
