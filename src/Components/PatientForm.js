@@ -3,14 +3,22 @@ import React from "react";
 const PatientForm = ({ patientsUrl }) => {
 
   const handleSubmit = (event) => {
-    console.log(event)
+    console.log(event.target)
     event.preventDefault()
     const newPatientFormData = {
       firstName: event.target[0].value,
       lastName: event.target[1].value
     }
 
-    console.log(newPatientFormData)
+    fetch(patientsUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newPatientFormData)
+    })
+      .then(r => r.json())
+      .then((data) => console.log(data))
   }
 
   return (

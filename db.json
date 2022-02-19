@@ -9,6 +9,11 @@
       "id": 2,
       "firstName": "Alyssa",
       "lastName": "Merrilees"
+    },
+    {
+      "firstName": "Micah",
+      "lastName": "Alston",
+      "id": 3
     }
   ]
 }
