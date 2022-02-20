@@ -3,9 +3,11 @@ import React from "react";
 const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatient, patientsUrl }) => {
 
   const handleDelete = (selectedPatient) => {
-    console.log(selectedPatient)
-    setPatients(patients.filter((patient) => patient !== selectedPatient))
-    setSelectedPatient(patients[0])
+    fetch(patientsUrl + `/${selectedPatient.id}`, {
+      method: "DELETE"
+    })
+      .then(setPatients(patients.filter((patient) => patient !== selectedPatient)))
+      .then(setSelectedPatient(patients[0]))
   }
 
   return (
