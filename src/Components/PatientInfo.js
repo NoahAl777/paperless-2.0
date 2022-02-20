@@ -4,6 +4,7 @@ const PatientInfo = ({ selectedPatient, patients, setPatients }) => {
 
   const handleDelete = (selectedPatient) => {
     console.log(selectedPatient)
+    setPatients(patients.filter((patient) => patient !== selectedPatient))
   }
 
   return (
