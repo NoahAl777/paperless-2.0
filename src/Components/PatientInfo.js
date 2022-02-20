@@ -1,6 +1,6 @@
 import React from "react";
 
-const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatient }) => {
+const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatient, patientsUrl }) => {
 
   const handleDelete = (selectedPatient) => {
     console.log(selectedPatient)

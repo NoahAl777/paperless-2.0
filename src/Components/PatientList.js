@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PatientInfo from "./PatientInfo";
 import Filter from "./Filter";
 
-const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatient }) => {
+const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatient, patientsUrl }) => {
   const [filterCriteria, setFilterCriteria] = useState("");
   const [patientsToDisplay, setPatientsToDisplay] = useState([]);
   // debugger
@@ -38,7 +38,7 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
         {listOfPatients}
       </div>
       <div className="PatientInfo">
-        <PatientInfo selectedPatient={selectedPatient} patients={patients} setPatients={setPatients} setSelectedPatient={setSelectedPatient} />
+        <PatientInfo selectedPatient={selectedPatient} patients={patients} setPatients={setPatients} setSelectedPatient={setSelectedPatient} patientsUrl={patientsUrl} />
       </div>
     </div>
   );
