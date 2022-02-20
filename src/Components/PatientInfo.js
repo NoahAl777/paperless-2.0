@@ -1,9 +1,15 @@
 import React from "react";
 
 const PatientInfo = ({ selectedPatient, patients, setPatients }) => {
+
+  const handleDelete = (selectedPatient) => {
+    console.log(selectedPatient)
+  }
+
   return (
     <div className="PatientInfo">
       <p>{`${selectedPatient.id} | ${selectedPatient.firstName} | ${selectedPatient.lastName}`}</p>
+      <button onClick={() => handleDelete(selectedPatient)}>x</button>
     </div>
   );
 };
