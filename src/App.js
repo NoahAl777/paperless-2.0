@@ -23,8 +23,20 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <PatientList patients={patients} setPatients={setPatients} selectedPatient={selectedPatient} setSelectedPatient={setSelectedPatient} patientsUrl={patientsUrl} />
-      <PatientForm patientsUrl={patientsUrl} patients={patients} setPatients={setPatients} />
+      <PatientList
+        patients={patients}
+        setPatients={setPatients}
+        selectedPatient={selectedPatient}
+        setSelectedPatient={setSelectedPatient}
+        patientsUrl={patientsUrl}
+        setPatientFormType
+      />
+      <button>Edit</button>
+      <PatientForm
+        patientsUrl={patientsUrl}
+        patients={patients}
+        setPatients={setPatients}
+      />
     </div>
   );
 }

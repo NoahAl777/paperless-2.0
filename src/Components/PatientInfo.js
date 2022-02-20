@@ -14,7 +14,6 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
     <div className="PatientInfo">
       <p>{`${selectedPatient.id} | ${selectedPatient.firstName} | ${selectedPatient.lastName}`}</p>
       <button onClick={() => handleDelete(selectedPatient)}>x</button>
-      <button>Edit</button>
     </div>
   );
 };
