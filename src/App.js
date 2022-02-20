@@ -32,7 +32,11 @@ function App() {
         patientsUrl={patientsUrl}
       />
       {/* <button onClick={handle}>Edit</button> */}
-      <EditPatientForm />
+      <EditPatientForm
+        patientsUrl={patientsUrl}
+        patients={patients}
+        setPatients={setPatients}
+      />
       <PatientForm
         patientsUrl={patientsUrl}
         patients={patients}
