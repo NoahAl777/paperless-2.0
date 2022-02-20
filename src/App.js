@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import NavBar from "./Components/NavBar"
 import PatientList from "./Components/PatientList";
 import PatientForm from "./Components/PatientForm";
+import EditPatientForm from './Components/EditPatientForm';
 
 function App() {
   const [patients, setPatients] = useState([])
@@ -31,6 +32,7 @@ function App() {
         patientsUrl={patientsUrl}
       />
       {/* <button onClick={handle}>Edit</button> */}
+      <EditPatientForm />
       <PatientForm
         patientsUrl={patientsUrl}
         patients={patients}
