@@ -38,7 +38,7 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
         {listOfPatients}
       </div>
       <div className="PatientInfo">
-        <PatientInfo selectedPatient={selectedPatient} patients={patients} setPatients={setPatients} />
+        <PatientInfo selectedPatient={selectedPatient} patients={patients} setPatients={setPatients} setSelectedPatient={setSelectedPatient} />
       </div>
     </div>
   );
