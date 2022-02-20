@@ -22,7 +22,7 @@ const PatientForm = ({ patientsUrl, patients, setPatients }) => {
 
   return (
     <div className="PatientForm">
-      <h3>PatientForm Component</h3>
+      <h3>New Patient Form</h3>
       <form onSubmit={(event) => handleSubmit(event)}>
         <label>First Name</label>
         <input type="text"></input>

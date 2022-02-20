@@ -8,6 +8,7 @@ import PatientForm from "./Components/PatientForm";
 function App() {
   const [patients, setPatients] = useState([])
   const [selectedPatient, setSelectedPatient] = useState({})
+  const [patientFormType, setPatientFormType] = useState("New")
   const patientsUrl = "http://localhost:3000/patients"
 
   useEffect(() => {
