@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PatientInfo from "./PatientInfo";
 import Filter from "./Filter";
 
-const PatientList = ({ patients, selectedPatient, setSelectedPatient }) => {
+const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatient }) => {
   const [filterCriteria, setFilterCriteria] = useState("");
   const [patientsToDisplay, setPatientsToDisplay] = useState([]);
   // debugger

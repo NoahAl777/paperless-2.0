@@ -3,7 +3,6 @@ import React from "react";
 const PatientForm = ({ patientsUrl, patients, setPatients }) => {
 
   const handleSubmit = (event) => {
-    console.log(event.target)
     event.preventDefault()
     const newPatientFormData = {
       firstName: event.target[0].value,
