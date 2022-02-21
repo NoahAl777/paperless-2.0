@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PatientInfo from "./PatientInfo";
 import Filter from "./Filter";
+import EditPatientForm from "./EditPatientForm";
 
 const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatient, patientsUrl }) => {
   const [filterCriteria, setFilterCriteria] = useState("");
@@ -40,6 +41,10 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
       <div className="PatientInfo">
         <PatientInfo selectedPatient={selectedPatient} patients={patients} setPatients={setPatients} setSelectedPatient={setSelectedPatient} patientsUrl={patientsUrl} />
       </div>
+      <EditPatientForm
+        patientsUrl={patientsUrl}
+        selectedPatient={selectedPatient}
+      />
     </div>
   );
 };
