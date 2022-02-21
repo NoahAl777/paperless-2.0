@@ -24,14 +24,16 @@ const EditPatientForm = ({ patientsUrl, selectedPatient, setSelectedPatient, pat
       body: JSON.stringify(updatedPatientFormData)
     })
       .then(r => r.json())
-      .then(patient => updatePatientsToDisplay(patient))
+      .then(updatePatientsToDisplay())
   }
 
-  const updatePatientsToDisplay = (patient) => {
+  const updatePatientsToDisplay = () => {
     const updatedDisplay = [...patients].map((patient) => {
       if (patient.id === selectedPatient.id) {
-        console.log(selectedPatient)
-        return { ...patient, firstName, lastName }
+        console.log("inside if", patient)
+        const updatedPatient = { ...patient, firstName, lastName }
+        setSelectedPatient(updatedPatient)
+        return updatedPatient
       } else {
         return patient
       }
