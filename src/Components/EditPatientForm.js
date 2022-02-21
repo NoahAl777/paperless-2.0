@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const EditPatientForm = ({ patientsUrl, selectedPatient, patients, setPatients }) => {
+const EditPatientForm = ({ patientsUrl, selectedPatient, setSelectedPatient, patients, setPatients }) => {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
 

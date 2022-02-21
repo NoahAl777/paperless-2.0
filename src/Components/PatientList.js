@@ -50,6 +50,7 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
         <EditPatientForm
           patientsUrl={patientsUrl}
           selectedPatient={selectedPatient}
+          setSelectedPatient={setSelectedPatient}
           patients={patients}
           setPatients={setPatients}
         />
