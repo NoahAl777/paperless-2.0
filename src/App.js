@@ -34,8 +34,7 @@ function App() {
       {/* <button onClick={handle}>Edit</button> */}
       <EditPatientForm
         patientsUrl={patientsUrl}
-        patients={patients}
-        setPatients={setPatients}
+        selectedPatient={selectedPatient}
       />
       <PatientForm
         patientsUrl={patientsUrl}
