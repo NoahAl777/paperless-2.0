@@ -39,12 +39,21 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
         {listOfPatients}
       </div>
       <div className="PatientInfo">
-        <PatientInfo selectedPatient={selectedPatient} patients={patients} setPatients={setPatients} setSelectedPatient={setSelectedPatient} patientsUrl={patientsUrl} />
+        <PatientInfo selectedPatient={selectedPatient}
+          patients={patients}
+          setPatients={setPatients}
+          setSelectedPatient={setSelectedPatient}
+          patientsUrl={patientsUrl}
+        />
       </div>
-      <EditPatientForm
-        patientsUrl={patientsUrl}
-        selectedPatient={selectedPatient}
-      />
+      <div className="EditPatientForm">
+        <EditPatientForm
+          patientsUrl={patientsUrl}
+          selectedPatient={selectedPatient}
+          patientsToDisplay={patientsToDisplay}
+          setPatientsToDisplay={setPatientsToDisplay}
+        />
+      </div>
     </div>
   );
 };
