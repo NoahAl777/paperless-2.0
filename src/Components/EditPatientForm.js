@@ -51,7 +51,7 @@ const EditPatientForm = ({ patientsUrl, selectedPatient, setSelectedPatient, pat
   }
 
   return (
-    <div className="EditPatientForm">
+    <>
       <h3>Edit Patient Form</h3>
       <form onSubmit={(event) => handleSubmit(event)}>
         <label>First Name</label>
@@ -60,7 +60,7 @@ const EditPatientForm = ({ patientsUrl, selectedPatient, setSelectedPatient, pat
         <input type="text" value={lastName} onChange={(event) => handleChange(event, "lastName")}></input>
         <input type="submit"></input>
       </form >
-    </div>
+    </>
   );
 };
 

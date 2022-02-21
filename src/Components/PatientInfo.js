@@ -11,10 +11,10 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
   }
 
   return (
-    <div className="PatientInfo">
+    <>
       <p>{`${selectedPatient.id} | ${selectedPatient.firstName} | ${selectedPatient.lastName}`}</p>
       <button onClick={() => handleDelete(selectedPatient)}>x</button>
-    </div>
+    </>
   );
 };
 
