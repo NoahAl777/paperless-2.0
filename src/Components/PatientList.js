@@ -37,14 +37,6 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
       <div className="PatientList">
         {listOfPatients}
       </div>
-      <div className="PatientInfo">
-        <PatientInfo selectedPatient={selectedPatient}
-          patients={patients}
-          setPatients={setPatients}
-          setSelectedPatient={setSelectedPatient}
-          patientsUrl={patientsUrl}
-        />
-      </div>
     </div>
   );
 };
