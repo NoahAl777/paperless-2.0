@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+=======
+import React from "react";
+>>>>>>> parent of bfe5a38 (add navigation button for editing form of patient)
 
 const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatient, patientsUrl }) => {
   const params = useParams()
@@ -18,6 +22,7 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
       .then(setSelectedPatient(patients[0]))
   }
 
+<<<<<<< HEAD
   if (Object.keys(selectedPatient).length === 0) {
     return <p>Loading...</p>
   } else {
@@ -32,6 +37,14 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
     )
   }
 
+=======
+  return (
+    <>
+      <p>{`${selectedPatient.id} | ${selectedPatient.firstName} | ${selectedPatient.lastName}`}</p>
+      <button onClick={() => handleDelete(selectedPatient)}>x</button>
+    </>
+  );
+>>>>>>> parent of bfe5a38 (add navigation button for editing form of patient)
 };
 
 export default PatientInfo;
