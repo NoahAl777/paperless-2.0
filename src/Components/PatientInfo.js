@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatient, patientsUrl }) => {
 
-  useEffect(() => {
-    setSelectedPatient(patients.filter((patient) => patient.id === parseInt(params.id)))
-    console.log("setSelectedPatient", (patients.filter((patient) => patient.id === parseInt(params.id))))
-  }, [patients])
+  // useEffect(() => {
+  //   setSelectedPatient(patients.filter((patient) => patient.id === parseInt(params.id)))
+  //   console.log("setSelectedPatient", (patients.filter((patient) => patient.id === parseInt(params.id))))
+  // }, [patients])
 
   const handleDelete = (selectedPatient) => {
     fetch(patientsUrl + `/${selectedPatient.id}`, {
@@ -19,6 +20,9 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
     <>
       <p>{`${selectedPatient.id} | ${selectedPatient.firstName} | ${selectedPatient.lastName}`}</p>
       <button onClick={() => handleDelete(selectedPatient)}>x</button>
+      <Link to="/edit">
+        <button>Edit</button>
+      </Link>
     </>
   );
 };
