@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
-import NavBar from "./Components/NavBar"
+import NavBar from "./Components/NavBar";
 import PatientList from "./Components/PatientList";
 import PatientForm from "./Components/PatientForm";
 
