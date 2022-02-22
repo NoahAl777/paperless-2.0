@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatient, patientsUrl }) => {
 
@@ -14,6 +15,9 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
     <>
       <p>{`${selectedPatient.id} | ${selectedPatient.firstName} | ${selectedPatient.lastName}`}</p>
       <button onClick={() => handleDelete(selectedPatient)}>x</button>
+      <Link to="/edit">
+        <button>Edit</button>
+      </Link>
     </>
   );
 };
