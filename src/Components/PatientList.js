@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import PatientInfo from "./PatientInfo";
+import { Link, useParams } from "react-router-dom";
 import Filter from "./Filter";
+import PatientInfo from "./PatientInfo";
 
 const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatient, patientsUrl }) => {
   const [filterCriteria, setFilterCriteria] = useState("");
   const [patientsToDisplay, setPatientsToDisplay] = useState([]);
+  const params = useParams();
   // debugger
   useEffect(() => {
     setPatientsToDisplay(patients)
@@ -19,14 +21,20 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
   };
 
   // debugger
+  const linkDynamicUrl = `/patients/${params.id}`
+
   const listOfPatients = patientsToDisplay.map((patient, index) => {
     return (
-      <button
-        key={index}
-        onClick={() => handleButtonClick(patient)}
-      >
-        {`${patient.firstName} ${patient.lastName}`}
-      </button>
+      <>
+        <Link to={`/patients/${patient.id}`}>
+          <button
+            key={index}
+            onClick={() => handleButtonClick(patient)}
+          >
+            {`${patient.firstName} ${patient.lastName}`}
+          </button>
+        </Link>
+      </>
     );
   }
   );

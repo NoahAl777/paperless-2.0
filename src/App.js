@@ -1,3 +1,6 @@
+//use rESTFUL ROUTES i.e: patients/new
+//use dynamic routes i.e: patients/3/edit
+
 // import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
@@ -30,7 +33,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/patients">
+        <Route path="/patients/:id">
           <PatientList
             patients={patients}
             setPatients={setPatients}
