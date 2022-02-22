@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Route, Switch } from "react-router-dom";
 import PatientInfo from "./PatientInfo";
 import Filter from "./Filter";
-import EditPatientForm from "./EditPatientForm";
 
 const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatient, patientsUrl }) => {
   const [filterCriteria, setFilterCriteria] = useState("");
@@ -47,17 +45,6 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
           patientsUrl={patientsUrl}
         />
       </div>
-      <Route path="/editPatientForm">
-        <div className="EditPatientForm">
-          <EditPatientForm
-            patientsUrl={patientsUrl}
-            selectedPatient={selectedPatient}
-            setSelectedPatient={setSelectedPatient}
-            patients={patients}
-            setPatients={setPatients}
-          />
-        </div>
-      </Route>
     </div>
   );
 };

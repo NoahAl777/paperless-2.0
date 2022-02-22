@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import PatientList from "./Components/PatientList";
 import PatientForm from "./Components/PatientForm";
+import EditPatientForm from './Components/EditPatientForm';
 
 function App() {
   const [patients, setPatients] = useState([])
@@ -33,6 +34,17 @@ function App() {
             setSelectedPatient={setSelectedPatient}
             patientsUrl={patientsUrl}
           />
+        </Route>
+        <Route path="/edit">
+          <div className="EditPatientForm">
+            <EditPatientForm
+              patientsUrl={patientsUrl}
+              selectedPatient={selectedPatient}
+              setSelectedPatient={setSelectedPatient}
+              patients={patients}
+              setPatients={setPatients}
+            />
+          </div>
         </Route>
         <Route path="/newPatientForm">
           <PatientForm
