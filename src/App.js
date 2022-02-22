@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./Components/NavBar";
+import Home from "./Components/Home";
 import PatientList from "./Components/PatientList";
 import PatientForm from "./Components/PatientForm";
 import EditPatientForm from './Components/EditPatientForm';
@@ -26,6 +27,9 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
         <Route path="/patients">
           <PatientList
             patients={patients}
