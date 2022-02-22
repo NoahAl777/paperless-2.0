@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 
 const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatient, patientsUrl }) => {
 
-  // useEffect(() => {
-  //   setSelectedPatient(patients.filter((patient) => patient.id === parseInt(params.id)))
-  //   console.log("setSelectedPatient", (patients.filter((patient) => patient.id === parseInt(params.id))))
-  // }, [patients])
-
   const handleDelete = (selectedPatient) => {
     fetch(patientsUrl + `/${selectedPatient.id}`, {
       method: "DELETE"
