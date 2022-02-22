@@ -39,7 +39,7 @@ function App() {
             patientsUrl={patientsUrl}
           />
         </Route>
-        <Route path="/edit">
+        <Route path="/edit-patient">
           <div className="EditPatientForm">
             <EditPatientForm
               patientsUrl={patientsUrl}
@@ -50,7 +50,7 @@ function App() {
             />
           </div>
         </Route>
-        <Route path="/newPatientForm">
+        <Route path="/new-patient">
           <PatientForm
             patientsUrl={patientsUrl}
             patients={patients}

@@ -15,7 +15,7 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
     <>
       <p>{`${selectedPatient.id} | ${selectedPatient.firstName} | ${selectedPatient.lastName}`}</p>
       <button onClick={() => handleDelete(selectedPatient)}>x</button>
-      <Link to="/edit">
+      <Link to="/edit-patient">
         <button>Edit</button>
       </Link>
     </>
