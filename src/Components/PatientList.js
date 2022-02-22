@@ -47,15 +47,17 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
           patientsUrl={patientsUrl}
         />
       </div>
-      <div className="EditPatientForm">
-        <EditPatientForm
-          patientsUrl={patientsUrl}
-          selectedPatient={selectedPatient}
-          setSelectedPatient={setSelectedPatient}
-          patients={patients}
-          setPatients={setPatients}
-        />
-      </div>
+      <Route path="/editPatientForm">
+        <div className="EditPatientForm">
+          <EditPatientForm
+            patientsUrl={patientsUrl}
+            selectedPatient={selectedPatient}
+            setSelectedPatient={setSelectedPatient}
+            patients={patients}
+            setPatients={setPatients}
+          />
+        </div>
+      </Route>
     </div>
   );
 };
