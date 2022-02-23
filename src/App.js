@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar setSelectedPatient={setSelectedPatient} />
       <Switch>
         <Route exact path="/">
           <Home />
