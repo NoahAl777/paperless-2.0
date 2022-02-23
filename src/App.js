@@ -1,6 +1,3 @@
-//use rESTFUL ROUTES i.e: patients/new
-//use dynamic routes i.e: patients/3/edit
-
 // import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
@@ -14,7 +11,6 @@ import EditPatientForm from './Components/EditPatientForm';
 function App() {
   const [patients, setPatients] = useState([])
   const [selectedPatient, setSelectedPatient] = useState({})
-  // const [patientFormType, setPatientFormType] = useState("New")
   const patientsUrl = "http://localhost:3000/patients"
   const params = useParams()
   console.log(params)
