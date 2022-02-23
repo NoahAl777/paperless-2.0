@@ -5,8 +5,8 @@ const PatientForm = ({ patientsUrl, patients, setPatients }) => {
   const handleSubmit = (event) => {
     event.preventDefault()
     const newPatientFormData = {
-      firstName: event.target[0].value,
-      lastName: event.target[1].value
+      firstName: event.target.firstName.value,
+      lastName: event.target.lastName.value
     }
 
     fetch(patientsUrl, {
@@ -25,9 +25,9 @@ const PatientForm = ({ patientsUrl, patients, setPatients }) => {
       <h3>New Patient Form</h3>
       <form onSubmit={(event) => handleSubmit(event)}>
         <label>First Name</label>
-        <input type="text"></input>
+        <input type="text" id="firstName"></input>
         <label>Last Name</label>
-        <input type="text"></input>
+        <input type="text" id="lastName"></input>
         <input type="submit"></input>
       </form >
     </div>
