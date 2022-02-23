@@ -6,7 +6,14 @@ const PatientForm = ({ patientsUrl, patients, setPatients }) => {
     event.preventDefault()
     const newPatientFormData = {
       firstName: event.target.firstName.value,
-      lastName: event.target.lastName.value
+      lastName: event.target.lastName.value,
+      dateOfBirth: event.target.dateOfBirth.value,
+      address: event.target.address.value,
+      phone: event.target.phone.value,
+      gender: event.target.gender.value,
+      email: event.target.email.value,
+      maritalStatus: event.target.maritalStatus.value,
+      insurance: event.target.insurance.value,
     }
 
     fetch(patientsUrl, {
