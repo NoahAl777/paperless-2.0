@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Filter from "./Filter";
 import PatientInfo from "./PatientInfo";
 
 const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatient, patientsUrl }) => {
   const [filterCriteria, setFilterCriteria] = useState("");
   const [patientsToDisplay, setPatientsToDisplay] = useState([]);
-  const params = useParams();
-  // debugger
+
   useEffect(() => {
     setPatientsToDisplay(patients)
   }, [patients]);
