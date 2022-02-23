@@ -26,7 +26,7 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
           key={index}
           onClick={() => handleButtonClick(patient)}
         >
-          <Link to={`/patients/${patient.id}`}>
+          <Link to={`/patients/${patient.id}`} >
             {`${patient.firstName} ${patient.lastName}`}
           </Link>
         </button>
