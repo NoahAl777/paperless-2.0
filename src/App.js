@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
-import { Route, Switch, useParams } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
 import PatientList from "./Components/PatientList";
@@ -12,8 +12,7 @@ function App() {
   const [patients, setPatients] = useState([])
   const [selectedPatient, setSelectedPatient] = useState({})
   const patientsUrl = "http://localhost:3000/patients"
-  const params = useParams()
-  console.log(params)
+
   useEffect(() => {
     fetch(patientsUrl)
       .then((r) => r.json())

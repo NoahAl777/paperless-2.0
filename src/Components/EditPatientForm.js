@@ -35,7 +35,6 @@ const EditPatientForm = ({ patientsUrl, selectedPatient, setSelectedPatient, pat
   const updatePatientsToDisplay = () => {
     const updatedDisplay = [...patients].map((patient) => {
       if (patient.id === selectedPatient.id) {
-        console.log("inside if", patient)
         const updatedPatient = { ...patient, firstName, lastName }
         setSelectedPatient(updatedPatient)
         return updatedPatient
