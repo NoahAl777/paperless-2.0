@@ -4,7 +4,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useParams } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
 import PatientList from "./Components/PatientList";
@@ -16,7 +16,8 @@ function App() {
   const [selectedPatient, setSelectedPatient] = useState({})
   // const [patientFormType, setPatientFormType] = useState("New")
   const patientsUrl = "http://localhost:3000/patients"
-
+  const params = useParams()
+  console.log(params)
   useEffect(() => {
     fetch(patientsUrl)
       .then((r) => r.json())
@@ -33,7 +34,14 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/patients/:id">
+        <Route path="/patients/new">
+          <PatientForm
+            patientsUrl={patientsUrl}
+            patients={patients}
+            setPatients={setPatients}
+          />
+        </Route>
+        <Route exact path="/patients/:id">
           <PatientList
             patients={patients}
             setPatients={setPatients}
@@ -42,7 +50,7 @@ function App() {
             patientsUrl={patientsUrl}
           />
         </Route>
-        <Route path="/edit-patient">
+        <Route path="/patients/:id/edit">
           <div className="EditPatientForm">
             <EditPatientForm
               patientsUrl={patientsUrl}
@@ -52,13 +60,6 @@ function App() {
               setPatients={setPatients}
             />
           </div>
-        </Route>
-        <Route path="/new-patient">
-          <PatientForm
-            patientsUrl={patientsUrl}
-            patients={patients}
-            setPatients={setPatients}
-          />
         </Route>
       </Switch>
     </div>

@@ -20,20 +20,17 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
     setSelectedPatient(patient)
   };
 
-  // debugger
-  const linkDynamicUrl = `/patients/${params.id}`
-
   const listOfPatients = patientsToDisplay.map((patient, index) => {
     return (
       <>
-        <Link to={`/patients/${patient.id}`}>
-          <button
-            key={index}
-            onClick={() => handleButtonClick(patient)}
-          >
+        <button
+          key={index}
+          onClick={() => handleButtonClick(patient)}
+        >
+          <Link to={`/patients/${patient.id}`}>
             {`${patient.firstName} ${patient.lastName}`}
-          </button>
-        </Link>
+          </Link>
+        </button>
       </>
     );
   }

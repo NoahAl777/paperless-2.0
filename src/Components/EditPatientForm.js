@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const EditPatientForm = ({ patientsUrl, selectedPatient, setSelectedPatient, patients, setPatients }) => {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
+  const params = useParams();
 
   useEffect(() => {
-    setFirstName(selectedPatient.firstName)
-    setLastName(selectedPatient.lastName)
+    if (patients.length !== 0) {
+      const urlPatient = patients.filter((patient) => patient.id === parseInt(params.id))
+      setFirstName(urlPatient[0].firstName)
+      setLastName(urlPatient[0].lastName)
+    }
   }, [selectedPatient])
 
   const handleSubmit = (event) => {
@@ -49,7 +54,7 @@ const EditPatientForm = ({ patientsUrl, selectedPatient, setSelectedPatient, pat
       setLastName(event.target.value)
     }
   }
-
+  // debugger
   return (
     <>
       <h3>Edit Patient Form</h3>
