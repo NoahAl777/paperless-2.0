@@ -28,6 +28,20 @@ const PatientForm = ({ patientsUrl, patients, setPatients }) => {
         <input type="text" id="firstName"></input>
         <label>Last Name</label>
         <input type="text" id="lastName"></input>
+        <label>Date of Birth</label>
+        <input type="text" id="dateOfBirth"></input>
+        <label>Address</label>
+        <input type="text" id="address"></input>
+        <label>Phone Number</label>
+        <input type="text" id="phone"></input>
+        <label>Gender</label>
+        <input type="text" id="gender"></input>
+        <label>Email</label>
+        <input type="text" id="email"></input>
+        <label>Marital Status</label>
+        <input type="text" id="maritalStatus"></input>
+        <label>Insurance</label>
+        <input type="text" id="insurance"></input>
         <input type="submit"></input>
       </form >
     </div>
