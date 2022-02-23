@@ -31,7 +31,7 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
         <p>Phone: {`${patientDisplayed[0].phone}`}</p>
         <p>Gender: {`${patientDisplayed[0].gender}`}</p>
         <p>Email: {`${patientDisplayed[0].email}`}</p>
-        <p>Marital Status:{`${patientDisplayed[0].maritalStatus}`}</p>
+        <p>Marital Status: {`${patientDisplayed[0].maritalStatus}`}</p>
         <p>Insurance: {`${patientDisplayed[0].insurance}`}</p>
         <button onClick={() => handleDelete(selectedPatient)}>x</button>
         <Link to={`/patients/${patientDisplayed[0].id}/edit`}>
