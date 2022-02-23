@@ -25,7 +25,14 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
   } else {
     return (
       <>
-        <p>{`${patientDisplayed[0].id} | ${patientDisplayed[0].firstName} | ${patientDisplayed[0].lastName}`}</p>
+        <p>{`${patientDisplayed[0].firstName} ${patientDisplayed[0].lastName}`}</p>
+        <p>Date of Birth: {`${patientDisplayed[0].dateOfBirth}`}</p>
+        <p>Address: {`${patientDisplayed[0].address}`}</p>
+        <p>Phone: {`${patientDisplayed[0].phone}`}</p>
+        <p>Gender: {`${patientDisplayed[0].gender}`}</p>
+        <p>Email: {`${patientDisplayed[0].email}`}</p>
+        <p>Marital Status:{`${patientDisplayed[0].maritalStatus}`}</p>
+        <p>Insurance: {`${patientDisplayed[0].insurance}`}</p>
         <button onClick={() => handleDelete(selectedPatient)}>x</button>
         <Link to={`/patients/${patientDisplayed[0].id}/edit`}>
           <button>Edit</button>
