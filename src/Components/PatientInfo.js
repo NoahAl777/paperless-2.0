@@ -7,7 +7,6 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
 
   useEffect(() => {
     if (Object.keys(selectedPatient).length !== 0 || selectedPatient !== patientDisplayed) {
-      console.log(selectedPatient)
       setPatientDisplayed(patients.filter((patient) => patient.id === parseInt(params.id)))
     }
   }, [selectedPatient])
@@ -34,15 +33,6 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
       </>
     )
   }
-  return (
-    <>
-      {patientDisplayed.length === 0 ? <p>Select a valid patient.</p> : <p>{`${patientDisplayed[0].id} | ${patientDisplayed[0].firstName} | ${patientDisplayed[0].lastName}`}</p>}
-      <button onClick={() => handleDelete(selectedPatient)}>x</button>
-      <Link to={`/patients/${patientDisplayed[0].id}/edit`}>
-        <button>Edit</button>
-      </Link>
-    </>
-  );
 };
 
 export default PatientInfo;
