@@ -22,21 +22,21 @@ const PatientList = ({ patients, setPatients, selectedPatient, setSelectedPatien
   const listOfPatients = patientsToDisplay.map((patient, index) => {
     return (
       <>
-        <button
-          key={index}
-          onClick={() => handleButtonClick(patient)}
-        >
-          <Link to={`/patients/${patient.id}`} >
+        <Link to={`/patients/${patient.id}`} >
+          <button
+            key={index}
+            onClick={() => handleButtonClick(patient)}
+          >
             {`${patient.firstName} ${patient.lastName}`}
-          </Link>
-        </button>
+          </button>
+        </Link>
       </>
     );
   }
   );
 
   return (
-    <div>
+    <div className="search">
       <Filter setFilterCriteria={setFilterCriteria} />
       <div className="PatientList">
         {listOfPatients}

@@ -24,8 +24,8 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
     return <p>Select a valid patient.</p>
   } else {
     return (
-      <>
-        <p>{`${patientDisplayed[0].firstName} ${patientDisplayed[0].lastName}`}</p>
+      <div className="PatientInfo">
+        <h3>{`${patientDisplayed[0].firstName} ${patientDisplayed[0].lastName}`}</h3>
         <p>Date of Birth: {`${patientDisplayed[0].dateOfBirth}`}</p>
         <p>Address: {`${patientDisplayed[0].address}`}</p>
         <p>Phone: {`${patientDisplayed[0].phone}`}</p>
@@ -37,7 +37,7 @@ const PatientInfo = ({ selectedPatient, patients, setPatients, setSelectedPatien
         <Link to={`/patients/${patientDisplayed[0].id}/edit`}>
           <button>Edit</button>
         </Link>
-      </>
+      </div>
     )
   }
 };

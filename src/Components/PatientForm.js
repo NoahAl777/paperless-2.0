@@ -32,24 +32,24 @@ const PatientForm = ({ patientsUrl, patients, setPatients }) => {
       <h3>New Patient Form</h3>
       <form onSubmit={(event) => handleSubmit(event)}>
         <label>First Name</label>
-        <input type="text" id="firstName"></input>
+        <input type="text" id="firstName"></input><br></br>
         <label>Last Name</label>
-        <input type="text" id="lastName"></input>
+        <input type="text" id="lastName"></input><br></br>
         <label>Date of Birth</label>
-        <input type="text" id="dateOfBirth"></input>
+        <input type="text" id="dateOfBirth"></input><br></br>
         <label>Address</label>
-        <input type="text" id="address"></input>
+        <input type="text" id="address"></input><br></br>
         <label>Phone Number</label>
-        <input type="text" id="phone"></input>
+        <input type="text" id="phone"></input><br></br>
         <label>Gender</label>
-        <input type="text" id="gender"></input>
+        <input type="text" id="gender"></input><br></br>
         <label>Email</label>
-        <input type="text" id="email"></input>
+        <input type="text" id="email"></input><br></br>
         <label>Marital Status</label>
-        <input type="text" id="maritalStatus"></input>
+        <input type="text" id="maritalStatus"></input><br></br>
         <label>Insurance</label>
-        <input type="text" id="insurance"></input>
-        <input type="submit"></input>
+        <input type="text" id="insurance"></input><br></br>
+        <input className="submit" type="submit"></input>
       </form >
     </div>
   );

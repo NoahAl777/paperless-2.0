@@ -94,24 +94,24 @@ const EditPatientForm = ({ patientsUrl, selectedPatient, setSelectedPatient, pat
       <h3>Edit Patient Form</h3>
       <form onSubmit={(event) => handleSubmit(event)}>
         <label>First Name</label>
-        <input type="text" value={firstName} onChange={(event) => handleChange(event, "firstName")}></input>
+        <input type="text" value={firstName} onChange={(event) => handleChange(event, "firstName")}></input><br></br>
         <label>Last Name</label>
-        <input type="text" value={lastName} onChange={(event) => handleChange(event, "lastName")}></input>
+        <input type="text" value={lastName} onChange={(event) => handleChange(event, "lastName")}></input><br></br>
         <label>Date of Birth</label>
-        <input type="text" value={dateOfBirth} onChange={(event) => handleChange(event, "dateOfBirth")}></input>
+        <input type="text" value={dateOfBirth} onChange={(event) => handleChange(event, "dateOfBirth")}></input><br></br>
         <label>Address</label>
-        <input type="text" value={address} onChange={(event) => handleChange(event, "address")}></input>
+        <input type="text" value={address} onChange={(event) => handleChange(event, "address")}></input><br></br>
         <label>Phone Number</label>
-        <input type="text" value={phone} onChange={(event) => handleChange(event, "phone")}></input>
+        <input type="text" value={phone} onChange={(event) => handleChange(event, "phone")}></input><br></br>
         <label>Gender</label>
-        <input type="text" value={gender} onChange={(event) => handleChange(event, "gender")}></input>
+        <input type="text" value={gender} onChange={(event) => handleChange(event, "gender")}></input><br></br>
         <label>Email</label>
-        <input type="text" value={email} onChange={(event) => handleChange(event, "email")}></input>
+        <input type="text" value={email} onChange={(event) => handleChange(event, "email")}></input><br></br>
         <label>Marital Status</label>
-        <input type="text" value={maritalStatus} onChange={(event) => handleChange(event, "maritalStatus")}></input>
+        <input type="text" value={maritalStatus} onChange={(event) => handleChange(event, "maritalStatus")}></input><br></br>
         <label>Insurance</label>
         <input type="text" value={insurance} onChange={(event) => handleChange(event, "insurance")}></input>
-        <input type="submit"></input>
+        <input className="submit" type="submit"></input>
       </form >
     </>
   );
