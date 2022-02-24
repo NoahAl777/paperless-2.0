@@ -7,6 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, 
+  rgba(138, 43, 226, 0.62), rgba(127, 255, 212, 0.8)
+  ), url("./images/doctor-image-background.jpeg");
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
