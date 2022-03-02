@@ -1,4 +1,5 @@
-#Paperless-Project
+# Paperless Project 2.0
+![Paperless Project 2.0 patients showpage](./src/images/paperless-2.0-patients.PNG)
 Description:
 
 This website is meant to help all healthcare physicians and administrators to better organize and store the information of all of their employees. It will also speed up the tedious process of patients having to sit in the waiting room every single visit and fill out loads of paperwork that they've already provided information for in the past.

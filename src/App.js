@@ -11,7 +11,7 @@ import EditPatientForm from './Components/EditPatientForm';
 function App() {
   const [patients, setPatients] = useState([])
   const [selectedPatient, setSelectedPatient] = useState({})
-  const patientsUrl = "http://localhost:3000/patients"
+  const patientsUrl = "http://localhost:4000/patients"
 
   useEffect(() => {
     fetch(patientsUrl)
@@ -20,6 +20,7 @@ function App() {
         setPatients(data)
         setSelectedPatient(data[0])
       })
+    console.log("fetched")
   }, [])
 
   return (

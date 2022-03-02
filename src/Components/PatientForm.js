@@ -1,27 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 const PatientForm = ({ patientsUrl, patients, setPatients }) => {
 
+  const [error, setError] = useState("")
+  const [formData, setFormData] = useState({ firstName: "", lastName: "", })
+  console.log(formData)
+  const handleChange = (event) => {
+    console.log(event.target.id)
+    setFormData({ ...formData, [event.target.id]: event.target.value })
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
-    const newPatientFormData = {
-      firstName: event.target.firstName.value,
-      lastName: event.target.lastName.value,
-      dateOfBirth: event.target.dateOfBirth.value,
-      address: event.target.address.value,
-      phone: event.target.phone.value,
-      gender: event.target.gender.value,
-      email: event.target.email.value,
-      maritalStatus: event.target.maritalStatus.value,
-      insurance: event.target.insurance.value,
-    }
 
     fetch(patientsUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(newPatientFormData)
+      body: JSON.stringify(formData)
     })
       .then(r => r.json())
       .then(newPatient => setPatients([...patients, newPatient]))
@@ -31,24 +28,25 @@ const PatientForm = ({ patientsUrl, patients, setPatients }) => {
     <div className="PatientForm">
       <h3>New Patient Form</h3>
       <form onSubmit={(event) => handleSubmit(event)}>
+        <h2>{error}</h2>
         <label>First Name</label>
-        <input type="text" id="firstName"></input><br></br>
+        <input type="text" id="firstName" onChange={handleChange}></input><br></br>
         <label>Last Name</label>
-        <input type="text" id="lastName"></input><br></br>
+        <input type="text" id="lastName" onChange={(event) => handleChange(event)}></input><br></br>
         <label>Date of Birth</label>
-        <input type="text" id="dateOfBirth"></input><br></br>
+        <input type="text" id="dateOfBirth" onChange={(event) => handleChange(event)}></input><br></br>
         <label>Address</label>
-        <input type="text" id="address"></input><br></br>
+        <input type="text" id="address" onChange={(event) => handleChange(event)}></input><br></br>
         <label>Phone Number</label>
-        <input type="text" id="phone"></input><br></br>
+        <input type="text" id="phone" onChange={(event) => handleChange(event)}></input><br></br>
         <label>Gender</label>
-        <input type="text" id="gender"></input><br></br>
+        <input type="text" id="gender" onChange={(event) => handleChange(event)}></input><br></br>
         <label>Email</label>
-        <input type="text" id="email"></input><br></br>
+        <input type="text" id="email" onChange={(event) => handleChange(event)}></input><br></br>
         <label>Marital Status</label>
-        <input type="text" id="maritalStatus"></input><br></br>
+        <input type="text" id="maritalStatus" onChange={(event) => handleChange(event)}></input><br></br>
         <label>Insurance</label>
-        <input type="text" id="insurance"></input><br></br>
+        <input type="text" id="insurance" onChange={(event) => handleChange(event)}></input><br></br>
         <input className="submit" type="submit"></input>
       </form >
     </div>
